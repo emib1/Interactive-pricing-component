@@ -1,0 +1,204 @@
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+body{
+    height:100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #f9faff;
+    background: url("/images/bg-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-position-x: 100%;
+    color: hsl(225, 20%, 60%);
+}
+
+main{
+    margin: 2rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+    color:hsl(227, 35%, 25%);
+}
+.main-text{
+    margin-bottom: 3rem;
+    background: url("/images/pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+}
+
+.price-views{
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:600px){
+    .price-views{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+}
+
+.price {
+    color: hsl(227, 35%, 25%);
+    font-size: 35px;
+}
+
+.pricing-container{
+    background-color: white;
+    padding: 3rem;
+    border-radius: 15px;
+}
+.line{
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-bar input{
+    width: 100%;
+    margin: 1rem 0;
+    position: relative;
+    background: hsl(174, 86%, 45%);
+      transition: all 0.5s;
+}
+
+.myrange {
+    appearance: none;
+    background-color: hsl(174, 77%, 80%);
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+  }
+
+.myrange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    background-image: url("images/icon-slider.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: hsl(174, 86%, 45%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.myrange::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 10px hsl(174, 86%, 45%);
+  }
+
+.line img:hover{
+    box-shadow: 0px 3px 10px 4px hsla(174, 86%, 45%,0.8);
+}
+.billing{
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 1.7rem;
+}
+.billing p{
+    font-size: 14px;
+  
+}
+.billing p:nth-child(1){
+    margin-right: 0.7rem;
+}
+.billing p:nth-child(3){
+    margin-left: 0.7rem;
+}
+.billing .discount {
+    margin-left: 0.7rem;
+    background-color: hsl(14, 92%, 95%);
+    color: hsl(15, 100%, 70%);
+    font-size: 12px;
+}
+
+/********      input checkbox          *********/
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: hsl(174, 86%, 45%);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.slider.round {
+    border-radius: 34px;
+}
+
+/********************************/
+.pricing-text{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pricing-text ul{
+   list-style: none;
+   font-size: 15px;
+}
+
+.pricing-text ul li{
+    margin-bottom: 0.4rem;
+}
+
+.pricing-text button{
+    width: 40%;
+    height: 20%;
+    justify-self: center;
+    padding: 0.5rem;
+    border: none;
+    background-color: hsl(227, 35%, 25%);
+    color: hsl(225, 20%, 60%);
+    border-radius: 45px;
+}
